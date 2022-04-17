@@ -26,7 +26,7 @@ app.get('/', function(req, res) {
     res.json({ message: 'WELCOME' });   
 });
 
-app.post('/genesis', upload.single('genesis'), (req, res, next) => {
+app.post('/upload', upload.single('file'), (req, res, next) => {
     const file = req.file
     if (!file) {
       const error = new Error('please upload a file')
